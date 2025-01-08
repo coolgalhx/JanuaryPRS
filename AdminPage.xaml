@@ -1,0 +1,57 @@
+﻿<Window x:Class="Patient_Record_System.AdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Page" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+       
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF1976D2" Offset="0" />
+                <GradientStop Color="#FFBBDEFB" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+       
+        <Label Content="Admin Page - Manage Employee Accounts" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,20,0,0" />
+
+       
+        <Grid Margin="30,80,30,250">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+           
+            <Label Content="Employee ID:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+            <TextBox x:Name="txtemployeeid" Grid.Row="0" Grid.Column="1" Width="250" Margin="5" />
+
+            <Label Content="Full Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+            <TextBox x:Name="txtfullname" Grid.Row="1" Grid.Column="1" Width="250" Margin="5" />
+
+            <Label Content="Username:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+            <TextBox x:Name="txtusername" Grid.Row="2" Grid.Column="1" Width="250" Margin="5" />
+
+            <Label Content="Password:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+            <TextBox x:Name="txtpassword" Grid.Row="3" Grid.Column="1" Width="250" Margin="5" />
+
+            <Label Content="Job Role:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+            <TextBox x:Name="txtjobrole" Grid.Row="4" Grid.Column="1" Width="250" Margin="5" />
+        </Grid>
+
+       
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,100">
+            <Button Content="Add Employee Account" Width="200" Height="40" FontWeight="Bold" Background="#FF0D47A1" Foreground="White" Margin="10" Click="btnaddaccount" />
+            <Button Content="Disable Employee Account" Width="200" Height="40" FontWeight="Bold" Background="#FFEF5350" Foreground="White" Margin="10" Click="btndisableaccount" />
+            <Button Content="Enable Employee Account" Width="200" Height="40" FontWeight="Bold" Background="#FF66BB6A" Foreground="White" Margin="10" Click="btnenableaccount" />
+            <Button Content="Change Password" Width="200" Height="40" FontWeight="Bold" Background="#FF42A5F5" Foreground="White" Margin="10" Click="btnchangepassword" />
+        </StackPanel>
+    </Grid>
+</Window>

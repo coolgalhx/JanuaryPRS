@@ -1,0 +1,45 @@
+﻿<Window x:Class="Patient_Record_System.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main Menu" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="MainMenuGrid">
+       
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF1976D2" Offset="0" />
+                <GradientStop Color="#FFBBDEFB" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+       
+        <Label Content="MAIN MENU" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,20,0,0" />
+
+
+        <StackPanel x:Name="ButtonsContainer" Orientation="Vertical" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top">
+            <Button Content="Add Patient Record" Height="40" Width="200" FontWeight="Bold" Background="#FF0D47A1" Foreground="White" Margin="0,10,0,0" Click="addpatient" />
+            <Button Content="Book Appointment" Height="40" Width="200" FontWeight="Bold" Background="#FF1E88E5" Foreground="White" Margin="0,10,0,0" Click="btnbookapptm" />
+            <Button Content="List All Appointments" Height="40" Width="200" FontWeight="Bold" Background="#FF42A5F5" Foreground="White" Margin="0,10,0,0" Click="btnlistallapptm" />
+            <Button Content="Search Patient Record" Height="40" Width="200" FontWeight="Bold" Background="#FF64B5F6" Foreground="White" Margin="0,10,0,0" Click="btnsearchpatient" />
+            <Button Content="Administration" Height="40" Width="200" FontWeight="Bold" Background="#FF90CAF9" Foreground="White" Margin="0,10,0,0" Click="btnadministration" />
+            <Button Content="All Accounts" Height="40" Width="200" FontWeight="Bold" Background="#FFBBDEFB" Foreground="Black" Margin="0,10,0,0" Click="btnallaccounts" />
+            <Button Content="Medical History Notes" Height="40" Width="200" FontWeight="Bold" Background="#FFBBDEFB" Foreground="Black" Margin="0,10,0,0" Click="btnmedicalhistorynotes" />
+
+            <Button Content="Logout" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0" Width="100" Height="40" FontWeight="Bold" Background="#FF5850EF" Foreground="White" Click="btnlogout_Click" />
+
+
+        </StackPanel>
+
+        
+        <Image HorizontalAlignment="Left" Margin="418,0,0,0" VerticalAlignment="Center" Height="400" Width="400" Source="/gp.jpg" Stretch="UniformToFill" />
+
+       
+        <Button HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btntexttospeech" BorderBrush="Transparent">
+            <Button.Background>
+                <ImageBrush ImageSource="/audiopic.png" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
+
+

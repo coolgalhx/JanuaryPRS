@@ -1,0 +1,25 @@
+﻿<Window x:Class="Patient_Record_System.AllAccounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="All Accounts" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF1976D2" Offset="0" />
+                <GradientStop Color="#FFBBDEFB" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+       
+        <Label Content="All User Accounts" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,20,0,0" />
+
+        
+        <DataGrid x:Name="datagridallaccounts" AutoGenerateColumns="True" IsReadOnly="True" 
+                  Margin="30,80,30,80" Background="White" AlternatingRowBackground="LightGray" 
+                  Foreground="Black" RowHeight="30" HeadersVisibility="Column" />
+
+       
+    </Grid>
+</Window>

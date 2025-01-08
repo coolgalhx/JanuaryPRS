@@ -1,0 +1,35 @@
+﻿<Window x:Class="Patient_Record_System.ListAllAppointments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="List All Appointments" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+       
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF1976D2" Offset="0" />
+                <GradientStop Color="#FFBBDEFB" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+       
+        <Label Content="List of All Appointments" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,20,0,0" />
+
+        
+        <DataGrid x:Name="datagridlistappointments" AutoGenerateColumns="False" Margin="30,80,30,80" 
+                  SelectionMode="Single" CanUserAddRows="False" Background="White" 
+                  AlternatingRowBackground="LightGray" Foreground="Black" RowHeight="30" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Patient ID" Binding="{Binding PatientId}" />
+                <DataGridTextColumn Header="Full Name" Binding="{Binding Fullname}" />
+                <DataGridTextColumn Header="DOB" Binding="{Binding DOB, StringFormat=yyyy-MM-dd}" />
+                <DataGridTextColumn Header="Appointment Date" Binding="{Binding AppointmentDate, StringFormat=yyyy-MM-dd}" />
+                <DataGridTextColumn Header="Appointment Time" Binding="{Binding AppointmentTime}" />
+                <DataGridTextColumn Header="Healthcare Practitioner" Binding="{Binding Healthcarepractitioner}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+      
+       
+    </Grid>
+</Window>
